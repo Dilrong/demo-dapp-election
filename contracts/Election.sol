@@ -9,6 +9,8 @@ contract Election {
         uint voteCount;
     }
 
+    Candidate[] Candidates;
+
     // Store accounts that have voted
     mapping(address => bool) public voters;
     // Store Candidates
@@ -23,8 +25,9 @@ contract Election {
     );
 
     constructor () {
-        addCandidate("Candidate 1");
-        addCandidate("Candidate 2");
+        addCandidate("dilrong");
+        addCandidate("lucy");
+        addCandidate("bob");
     }
 
     function addCandidate (string memory _name) private {
